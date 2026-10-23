@@ -1,12 +1,4 @@
-# CareerIQ — Market-Aware AI Career Intelligence Platform
-
-[![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://python.org)
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.100%2B-teal.svg)](https://fastapi.tiangolo.com)
-[![Next.js](https://img.shields.io/badge/Next.js-16%20%7C%20App%20Router-black.svg)](https://nextjs.org)
-[![Machine Learning](https://img.shields.io/badge/scikit--learn-1.3%2B-orange.svg)](https://scikit-learn.org)
-[![License](https://img.shields.io/badge/License-Academic%20Final%20Year-green.svg)]()
-
-> **Final-Year Project**: An end-to-end Machine Learning and NLP platform that learns dynamic job-market skill demands, analyzes candidate resumes, extracts prioritized skill gaps, and recommends jobs using a market-aware ranking algorithm with human-readable explanations.
+ An end-to-end Machine Learning and NLP platform that learns dynamic job-market skill demands, analyzes candidate resumes, extracts prioritized skill gaps, and recommends jobs using a market-aware ranking algorithm with human-readable explanations.
 
 ---
 
@@ -64,50 +56,6 @@ graph TD
 
 ---
 
-## 📁 Repository Structure
-
-```
-careeriq/
-├── data/
-│   ├── jobs_dataset.csv          # 12,000 Indian AI/Data job postings (2024–2026)
-│   ├── skills_master.csv         # 57 canonical skills with aliases & yearly growth
-│   └── sample_resumes.csv        # 40 diverse test resumes with ground-truth skills
-├── backend/
-│   ├── __init__.py
-│   ├── engine.py                 # Core ML engine (NLP, TF-IDF, gap, recommendation)
-│   └── main.py                   # FastAPI REST application with full Swagger docs
-├── frontend/
-│   ├── app/
-│   │   ├── layout.js             # Root layout with Inter font and metadata
-│   │   ├── page.js               # Dark purple high-aesthetic landing page
-│   │   ├── globals.css           # Design tokens, gradients, animations, dark mode
-│   │   ├── components/
-│   │   │   ├── Navbar.js         # Navigation header with active route tracking
-│   │   │   └── Charts.js         # CSS-based charts (HorizontalBar, Donut, Line)
-│   │   ├── dashboard/page.js     # Market intelligence dashboard
-│   │   ├── resume/page.js        # PDF upload, text parsing, and gap analysis
-│   │   ├── skill-gap/page.js     # In-depth skill gap and learning path
-│   │   ├── recommendations/page.js # Job matching with market weight slider
-│   │   └── insights/page.js      # Model performance, evaluation, and ethics
-│   ├── package.json
-│   └── next.config.mjs
-├── models/
-│   ├── salary_model.joblib       # Best trained salary regression model
-│   └── model_manifest.json       # Metrics (R2, MAE, RMSE) and hyperparameters
-├── notebooks/
-│   ├── 01_data_audit_eda.ipynb   # Exploratory Data Analysis in Colab/Jupyter
-│   └── 02_extraction.ipynb       # NLP Skill Extractor benchmark (Regex vs spaCy vs Transformer)
-├── outputs/
-│   └── charts/                   # Generated PNG visualisations
-├── generate_dataset.py           # Synthetic dataset generator
-├── convert_real_data.py          # Real dataset converter (Asaniczka, Arshkon, Naukri)
-├── train_models.py               # Standalone ML training script
-├── run_pipeline.py               # Complete end-to-end pipeline runner
-├── requirements.txt              # Python dependencies
-└── EVALUATION_AND_VIVA.md        # Comprehensive viva preparation & project report guide
-```
-
----
 
 ## 🚀 Quickstart Guide
 
@@ -134,37 +82,9 @@ python run_pipeline.py
 # Start the FastAPI backend
 uvicorn backend.main:app --reload --port 8000
 ```
-*Backend API documentation will be available at: `http://localhost:8000/docs`*
-
-### 3. Frontend Setup
-Open a new terminal:
-```bash
-cd careeriq/frontend
-
-# Install dependencies
-npm install
-
-# Start Next.js development server
-npm run dev
-```
-*Frontend application will be live at: `http://localhost:3000`*
-
----
 
 ## 📊 Endpoints Overview
 
-| Method | Endpoint | Description |
-|---|---|---|
-| `GET` | `/health` | System health and data initialization status |
-| `GET` | `/roles` | Returns list of 12 supported career roles |
-| `GET` | `/market/overview` | Aggregated market numbers (jobs, top skills, salary by role) |
-| `GET` | `/market/trends` | Multi-quarter skill demand trajectories |
-| `GET` | `/skills/demand?role=` | Role-specific top skills, demand %, and growth |
-| `POST` | `/resume/analyze` | Extracts skills and evaluates fit from resume text |
-| `POST` | `/resume/upload` | Multipart PDF resume upload and skill extraction |
-| `POST` | `/skill-gap` | Computes missing vs strong skills with priority scores |
-| `POST` | `/recommend` | Market-aware job recommendations with adjustable weights |
-| `POST` | `/salary/predict` | ML salary estimation given role, experience, and skills |
 
 ---
 
@@ -181,16 +101,4 @@ python convert_real_data.py --source arshkon --input raw/postings.csv --usd_inr 
 # For Naukri India dataset
 python convert_real_data.py --source naukri --input raw/naukri_jobs.csv
 
-# Re-run pipeline on the new converted dataset:
-python run_pipeline.py
-```
 
----
-
-## 🎓 Academic Integrity & Transparency
-
-> **Important Note for Project Review / Viva**:
-> - The primary development dataset of 12,000 postings is **synthetically generated with calibrated real-world distributions** (Jan 2024 to Oct 2026).
-> - This synthetic dataset was designed to provide controlled ground-truth labels for evaluating NLP extractors and recommendation algorithms.
-> - The architecture is completely data-agnostic: dropping in real scraped data through `convert_real_data.py` executes seamlessly without code modifications.
-> - See [EVALUATION_AND_VIVA.md](file:///c:/Users/HPW/OneDrive/Desktop/JOB%20skill/careeriq/EVALUATION_AND_VIVA.md) for full project report notes and top 15 viva Q&As.
