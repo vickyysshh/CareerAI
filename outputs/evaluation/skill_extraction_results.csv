@@ -1,0 +1,2 @@
+method,precision,recall,f1,evaluation_note
+Keyword Regex Baseline,0.992,0.99,0.991,CIRCULAR — ground-truth and extraction share the same skill list

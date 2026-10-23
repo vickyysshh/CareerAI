@@ -1,0 +1,5 @@
+model,MAE_LPA,RMSE_LPA,R2
+DummyRegressor (mean),5.768,7.511,-0.0033
+Linear Regression,1.743,2.381,0.8991
+Random Forest,1.503,2.158,0.9172
+Gradient Boosting,1.315,1.838,0.9399

@@ -1,0 +1,56 @@
+{
+  "version": "1.0.0",
+  "created_at": "2026-10-20T22:37:05.728725",
+  "dataset_provenance": "SYNTHETIC \u2014 12,000 simulated Indian AI/Data job postings (2024-2026). Not real labor-market data.",
+  "artifacts": {
+    "salary_model": {
+      "filename": "salary_model.joblib",
+      "model_type": "Gradient Boosting",
+      "target": "salary_mid_lpa (INR Lakhs Per Annum)",
+      "evaluation_metrics": {
+        "model": "Gradient Boosting",
+        "MAE_LPA": 1.315,
+        "RMSE_LPA": 1.838,
+        "R2": 0.9399
+      },
+      "evaluation_note": "Metrics from held-out 20% test set. Model trained on SYNTHETIC salary data \u2014 output is a demonstration estimate.",
+      "feature_count": 63,
+      "all_model_results": [
+        {
+          "model": "DummyRegressor (mean)",
+          "MAE_LPA": 5.768,
+          "RMSE_LPA": 7.511,
+          "R2": -0.0033
+        },
+        {
+          "model": "Linear Regression",
+          "MAE_LPA": 1.743,
+          "RMSE_LPA": 2.381,
+          "R2": 0.8991
+        },
+        {
+          "model": "Random Forest",
+          "MAE_LPA": 1.503,
+          "RMSE_LPA": 2.158,
+          "R2": 0.9172
+        },
+        {
+          "model": "Gradient Boosting",
+          "MAE_LPA": 1.315,
+          "RMSE_LPA": 1.838,
+          "R2": 0.9399
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "scikit-learn": "1.9.1",
+    "joblib": "1.6.0"
+  },
+  "known_limitations": [
+    "Trained on synthetic data \u2014 not a real salary predictor.",
+    "Salary formula is deterministic with Gaussian noise \u2014 R\u00b2 may be artificially high.",
+    "No cross-company or cross-location real benchmarks.",
+    "Model cannot be updated without retraining on new data."
+  ]
+}

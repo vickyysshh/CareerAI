@@ -1,0 +1,58 @@
+skill,category,aliases,yearly_growth
+Python,Programming,,0.02
+SQL,Database,,0.0
+Java,Programming,,-0.01
+C++,Programming,,0.0
+JavaScript,Programming,JS,0.01
+TypeScript,Programming,,0.03
+Excel,Analytics,MS Excel|Advanced Excel,-0.02
+Power BI,Analytics,PowerBI,0.02
+Tableau,Analytics,,0.0
+Statistics,ML,,0.0
+Machine Learning,ML,ML,0.01
+Deep Learning,ML,DL,0.02
+NLP,ML,Natural Language Processing,0.03
+Computer Vision,ML,CV,0.0
+scikit-learn,ML,sklearn|Scikit-learn,0.0
+Pandas,ML,,0.0
+NumPy,ML,,0.0
+TensorFlow,DL Framework,,-0.04
+PyTorch,DL Framework,,0.05
+Keras,DL Framework,,-0.03
+XGBoost,ML,,0.0
+Hugging Face,GenAI,HuggingFace|Transformers,0.07
+LLMs,GenAI,Large Language Models|LLM,0.16
+LangChain,GenAI,,0.13
+RAG,GenAI,Retrieval Augmented Generation,0.13
+Prompt Engineering,GenAI,,0.08
+Generative AI,GenAI,GenAI,0.13
+Vector Databases,GenAI,Vector DB|Pinecone|FAISS,0.08
+OpenCV,ML,,0.0
+Spark,Big Data,PySpark|Apache Spark,0.01
+Hadoop,Big Data,,-0.05
+Airflow,Data Eng,Apache Airflow,0.03
+Kafka,Data Eng,Apache Kafka,0.02
+dbt,Data Eng,,0.04
+Snowflake,Data Eng,,0.04
+Docker,DevOps,,0.08
+Kubernetes,DevOps,K8s,0.05
+AWS,Cloud,Amazon Web Services,0.04
+Azure,Cloud,Microsoft Azure,0.03
+GCP,Cloud,Google Cloud,0.02
+MLflow,MLOps,,0.06
+CI/CD,DevOps,CICD,0.03
+Git,Tools,GitHub,0.0
+Terraform,DevOps,,0.03
+FastAPI,Backend,,0.05
+Flask,Backend,,-0.01
+Django,Backend,,0.0
+REST APIs,Backend,RESTful APIs|REST API,0.01
+PostgreSQL,Database,Postgres,0.02
+MongoDB,Database,,0.0
+Linux,Tools,,0.0
+Data Visualization,Analytics,,0.01
+A/B Testing,Analytics,AB Testing,0.02
+Feature Engineering,ML,,0.0
+Time Series,ML,Time Series Forecasting,0.01
+React,Frontend,React.js,0.0
+Node.js,Backend,NodeJS,0.0

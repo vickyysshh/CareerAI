@@ -1,0 +1,3 @@
+model,w_market,precision_at_5
+A: Baseline (similarity only),0.0,0.76
+B: Market-Aware (w=0.4),0.4,0.795
